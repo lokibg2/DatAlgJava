@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 public class URLify {
     static BufferedReader br;
     static StringBuilder output;
-    int bitVector = 0;
+
 
 
     public URLify() {
