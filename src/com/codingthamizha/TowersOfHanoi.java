@@ -19,15 +19,14 @@ public class TowersOfHanoi {
         br = new BufferedReader(new InputStreamReader(System.in));
         output = new StringBuffer();
     }
-
-    public void Solve(int n, int x, int y, int z) {
+    public void solve(int n, int x, int y, int z) {
         if (n > 1) {
 //            Solve the problem of moving n-1 disks from x to z using y
-            Solve(n - 1, x, z, y);
+            solve(n - 1, x, z, y);
 //            Move disks from x to y
             makeMove(x, y);
 //             Solve the problem of moving n-1 disks from z to y using x
-            Solve(n - 1, z, y, x);
+            solve(n - 1, z, y, x);
         } else if (n == 1) {
             makeMove(x, y);
         }
@@ -57,7 +56,7 @@ public class TowersOfHanoi {
             System.out.println("Invalid Input!");
         }
 //         Solve the problem of moving n-1 disks from x to y using z
-        toh.Solve(numberOfDisks, a, b, c);
+        toh.solve(numberOfDisks, a, b, c);
         System.out.println(output.toString());
         System.out.println("Total Moves : " + movesCount);
 
