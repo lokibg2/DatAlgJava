@@ -40,6 +40,7 @@ public class OneAway {
         for (int i = 0; i < str1.length(); i++) {
             if (str1.charAt(i) != str2.charAt(i)) {
                 if (flag) {
+//                    If characters are unequal for the second time
                     return false;
                 }
                 flag = true;
@@ -52,6 +53,7 @@ public class OneAway {
         for (int i = 0, j = 0; i < str1.length() && j < str2.length(); ) {
             if (str1.charAt(i) != str2.charAt(j)) {
                 if (i != j) {
+//                    If characters are unequal for the second time
                     return false;
                 }
                 j++;
